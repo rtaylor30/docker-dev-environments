@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt update && apt install -q -y vim git openssh-server
-RUN echo  -n 15rabbits | passwd root --stdin
+RUN echo "root:15rabbits" | chpasswd
 
 EXPOSE 22
 
