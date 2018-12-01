@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt update && apt install -q -y vim git openssh-server
-RUN echo -e "root:password" | chpasswd
+RUN echo -n "root:password" | chpasswd
 
 EXPOSE 22
 
